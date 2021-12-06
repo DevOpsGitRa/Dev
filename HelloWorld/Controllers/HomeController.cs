@@ -1,12 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 
-namespace dotnetHelloWorld.Controllers
+namespace HelloWorld.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: /<controller>/
-        public IActionResult Index()
+        // GET: Home
+        public ActionResult Index()
         {
+            ViewBag.Message = "This is my first MVC 5 App.";
             return View();
         }
     }
